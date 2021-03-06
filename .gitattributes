@@ -1,0 +1,3 @@
+*[[:space:]].js filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].json filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].env filter=lfs diff=lfs merge=lfs -text
