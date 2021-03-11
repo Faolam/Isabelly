@@ -20,7 +20,7 @@ const execute = (bot,msg,args) => {
 
 // Informações do comando!
 module.exports ={
-    name: "Isabelly",
+    name: "isabelly",
     help: "Apresenta informações sobre a Isabelly.",
     execute,
 }
