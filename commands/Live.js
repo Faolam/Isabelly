@@ -15,6 +15,8 @@ const execute = (bot,msg,args) => {
     .addField(`📘 Live da Lorena 📘`, `https://www.twitch.tv/lorecristine`, true)
     .addField(`📙 Live do FenixRXP 📙`, `https://www.twitch.tv/fenixrxp`, true)
     .addField(`📔 Live do Vaca 📔`, `https://www.twitch.tv/vacasuperior`, true)
+    .addField(`📒 Live do Salopaxz 📒`, `https://www.twitch.tv/salopaxz`, true)
+    .addField(`📓 Live do Frogman1 📓`, `https://www.twitch.tv/frogman1`, true)
 
     msg.channel.send(embed);
 }
