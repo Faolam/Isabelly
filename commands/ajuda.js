@@ -21,6 +21,7 @@ const execute = (bot,msg,args) => {
         .addField(`💡 =avatar <@Usuário>`, "Mostra o avatar do Usuário mencionado!", true)
         .addField(`💡 =reportar <problema>`, "Aqui você fará um report sobre um problema que por ventura eu possa ter!", true)
         .addField(`💡 =lives`, "Aqui mostrarei as lives do pessoal da comunidade!", true)
+        .addField(`💡 =ysearch`, "Aqui mostrarei as informações de qualquer vídeo do Youtube", true)
         .setFooter(`@${msg.author.username}, os comandos que você desejar utilizar precisam ser semelhantes aos que foram expostos acima!`);
     
         msg.channel.send(embed);
