@@ -40,15 +40,15 @@ bot.once('ready', () => {
     console.log('=============== Estou Pronta Para Ser Usada! Bot:Isabelly ===============');
     console.log('==================================@@@@@==================================');
     let atividade_do_bot = [
-        `❓ Encontrou algum problema? Reporte em "=reportar <problema>"! ❓`,
-        `🦝 Atualização v18.9 © Isabelly 🦝`,
+        `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
+        `🐬 Atualização v19.3 © Isabelly 🐬`,
         `🧐 f(x)et agradeço a você! Update!! 🧐`,
-        `🔴 =ajuda 🔴`,
-        `💰 Sendo util para ${bot.guilds.cache.size} servidores! 💰`,
+        `🧼 =ajuda 🧼`,
+        `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
     ],
     i = 0;
     setInterval(() => bot.user.setActivity(`${atividade_do_bot[i++ % atividade_do_bot.length]}`, {
-        type: "WATCHING"
+        type: "LISTENING"
     }), 5000);
         bot.user
             .setStatus("online")
