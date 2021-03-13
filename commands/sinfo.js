@@ -10,6 +10,7 @@ const execute = (bot,msg,args) => {
     .setTitle(`${msg.author.username}, segue ai informações sobre o servidor!`)
     .setColor("#1f9b02")
     .setDescription(`⚙️ Algumas informações do servidor!! ⚙️`)
+    .setThumbnail(`https://cdn.discordapp.com/icons/${msg.guild.id}/${msg.guild.icon}.png`)
     .addField(`👻 O nome deste servidor é`, msg.guild.name, true)
     .addField(`👻 O número de membros é`, msg.guild.memberCount, true)
     .addField(`👻 O server foi criado em`, msg.guild.createdAt, true)
