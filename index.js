@@ -41,7 +41,7 @@ bot.once('ready', () => {
     console.log('==================================@@@@@==================================');
     let atividade_do_bot = [
         `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
-        `🐬 Atualização v19.3 © Isabelly 🐬`,
+        `🐬 Atualização v19.6 © Isabelly 🐬`,
         `🧐 f(x)et agradeço a você! Update!! 🧐`,
         `🧼 =ajuda 🧼`,
         `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
