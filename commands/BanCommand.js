@@ -2,19 +2,31 @@ const Discord = require('discord.js');
 
 
 const execute = (bot, msg, args) => {
-    let User = msg.mentions.users.first();
+    const User = msg.mentions.users.first();
 
     if (!User) {
-        return msg.reply(` infelizmente parece que o usuario mencionado não existe nesse servidor!`);
+        return msg.reply(` você não mencionou ninguém para Banir! kkkk`);
     }
 
     if (!msg.member.hasPermission("BAN_MEMBERS")) {
         return msg.reply(` infelizmente você não tem o poder necessário para realizar essa tarefa!`);
     }
 
-    return msg.guild.members.ban(User)
-        .then(() => msg.reply(` ${User} foi ejetado do servidor naquele jeito! kkkkkkkkkk Pokas!`))
-        .catch(error => msg.reply(` vish! Algo de errado aconteceu e não consegui mandar ${User} embora! Parece até magia!`));
+    if (User) {
+        const member = msg.guild.member(User);
+
+        if (member) {
+            member
+                .ban('Reação kkkkkkkkk')
+                .then(() => msg.reply(` ${User} foi ejetado do servidor naquele jeito! kkkkkkkkkk Pokas!`))
+                .catch(err => {
+                    msg.reply(` vish! Algo de errado aconteceu e não consegui mandar ${User} embora! Parece até magia!`);
+                    console.error(err)
+                });
+        } else {
+            msg.reply(` você está ultilizando esse comando e não sabe se o usuário mencionado está ou não nesse servidor. Verifica direito ai, por que aqui me parece que ${User} não está no servidor! Mais atenção!`)
+        }
+    }
 };
 
 module.exports = {
