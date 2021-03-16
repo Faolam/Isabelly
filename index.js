@@ -48,7 +48,7 @@ bot.once('ready', () => {
     ],
     i = 0;
     setInterval(() => bot.user.setActivity(`${atividade_do_bot[i++ % atividade_do_bot.length]}`, {
-        type: "LISTENING"
+        type: "PLAYING"
     }), 5000);
         bot.user
             .setStatus("online")

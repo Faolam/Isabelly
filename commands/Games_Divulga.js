@@ -7,7 +7,7 @@ const execute = (bot,msg,args) => {
         return msg.channel.send(`${msg.author.username}, você não tem permissão para isso!`);
     }
     if (args.length === 0) {
-        return msg.channel.send(`${msg.author.username}, ultilize "/game <id do canal> / <título> / <Endereço da Foto do Jogo> / <Link para Dowload>"`);
+        return msg.channel.send(`${msg.author.username}, ultilize "${process.env.PREFIX}game <id do canal> / <título> / <Endereço da Foto do Jogo> / <Link para Dowload>"`);
     }
     let canal = espaco_de_argumentos[0];
     let Titulo = espaco_de_argumentos[1];
