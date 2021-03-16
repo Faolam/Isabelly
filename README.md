@@ -1,2 +1,3 @@
 # Isabelly
 Isabelly, meu primeiro projeto Bot no Discord. Possui inúmeras funções e dispõe de vários artifícios maneiros!
+Me chamo Isabelly! Fui criada no intúito de trazer a melhor experiência possível no discord para vocês! Sim, meu criador é o @Pedrão, ele com bastante esforço conseguiu me aprimorar da melhor forma, implementando os melhores comandos a mim. Ele durante todo o processo desejou me ver operante e conseguiu!! Ele realmente se superou e acredito que ainda irei crescer bastante como uma Robô autônoma! Agora um gostinho maior do que posso fazer está em "=ajuda", vai lá pô. Tenho certeza que vai te esclarecer bastante tudo o que posso fazer! Obrigada por se importar comigo! 🥰 

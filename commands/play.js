@@ -6,6 +6,13 @@ const ytdl = require("ytdl-core-discord");
 
 // Inicio ao desenvolvimento do comando play
 const execute = (bot, msg, args) => {
+    // Aba para colocar os emojis da reaction e do comando play!
+    const emoji1 = bot.emojis.cache.get("821123456828964874")
+    const emoji2 = bot.emojis.cache.get("821123475364118589")
+    const emoji3 = bot.emojis.cache.get("821123492745052190")
+    const emoji4 = bot.emojis.cache.get("821123511720214580")
+    const emoji5 = bot.emojis.cache.get("821123530275946496")
+    // Fim da aba de emojis
     const s = args.join(" ");
     try {
       search(s, (err, result) => {
@@ -19,18 +26,21 @@ const execute = (bot, msg, args) => {
 
           .setThumbnail(song.thumbnail)
           .setTimestamp()
-          .setTitle(`📥 - Resultados para a Busca - 📤`)
+          .setAuthor(`---> Nova Música Adicionada a Fila! <---`, bot.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
+          .setTitle(`${emoji4} - Resultados para a Busca - ${emoji4}`)
           .setColor("RANDOM")
-          .setDescription(`😍 ${song.title} 😍`)
+          .setDescription(`${emoji3} ${song.title} ${emoji3}`)
           .addField(`🎧 Descrição da Música:`, song.description, true)
           .addField(`🎧 URL da Música:`, song.url, true)
           .addField(`🎧 Quantidade de views`, song.views, true)
+          .setFooter(`Sistema de Músicas! A fila está em: "=fila"`)
 
           msg.channel.send(embed_Música).then(msg1 => {
-            msg1.react("🤙").then(msg2 => {
-              msg1.react("👎")
-            })
+            msg1.react(emoji1)
+            msg1.react(emoji2)
+            msg1.react(emoji5) 
           });
+
           // Fim do supracitado resultado! 
           if (queue) {
             queue.songs.push(song);

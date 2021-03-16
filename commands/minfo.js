@@ -16,6 +16,8 @@ const execute = (bot,msg,args) => {
     .addField(`🔔 =pause`, `Pausa a música atual!`, true)
     .addField(`🔔 =resume`, `Volta a reprodução das músicas!`, true)
     .addField(`🔔 =stop`, `Para a reprodução de todas as músicas!`, true)
+    .addField(`🔔 =sound "1 a 10"`, `Para a reprodução da música em um som pessoal personalizado!`, true)
+    .addField(`🔔 =fila`, `Exibe a lista de músicas em reprodução neste servidor!`, true)
 
     msg.channel.send(embed);
 }

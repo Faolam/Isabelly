@@ -41,8 +41,8 @@ bot.once('ready', () => {
     console.log('==================================@@@@@==================================');
     let atividade_do_bot = [
         `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
-        `🌍 Atualização v19.8 © Isabelly 🌍`,
-        `🧐 f(x)et agradeço a você! Update!! 🧐`,
+        `🌍 Atualização v20.0.15 © Isabelly 🌍`,
+        `🐨 VIGÉSIMA versão! 🐨`,
         `🧼 =ajuda 🧼`,
         `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
     ],
@@ -51,7 +51,7 @@ bot.once('ready', () => {
         type: "LISTENING"
     }), 5000);
         bot.user
-            .setStatus("online")
+            .setStatus("idle")
             .catch(console.log);
 });
 
