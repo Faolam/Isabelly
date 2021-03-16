@@ -5,7 +5,7 @@ const dotenv = require("dotenv"); // Biblioteca para facilitar o desenvolvimento
 const fs = require("fs"); // Outra biblioteca para facilitar o desenvolvimento
 const path = require("path"); // Puxando variáveis do path.
 
-// tentando arrumar no heroku
+// Tentando arrumar no heroku - Forçando a execução de uma porta externa!
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT;
