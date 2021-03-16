@@ -41,7 +41,7 @@ bot.once('ready', () => {
     console.log('==================================@@@@@==================================');
     let atividade_do_bot = [
         `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
-        `🌍 Atualização v20.0.15 © Isabelly 🌍`,
+        `🌍 Atualização v20.0.18 © Isabelly 🌍`,
         `🐨 VIGÉSIMA versão! 🐨`,
         `🧼 =ajuda 🧼`,
         `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
@@ -51,7 +51,7 @@ bot.once('ready', () => {
         type: "LISTENING"
     }), 5000);
         bot.user
-            .setStatus("idle")
+            .setStatus("online")
             .catch(console.log);
 });
 
@@ -60,6 +60,8 @@ bot.once('ready', () => {
 // Criando evento mensagem, onde o bot se nn reconhecer o comando responderá de uma outra forma.
 bot.on("message", (msg) => {
     if (!msg.content.startsWith(process.env.PREFIX) || msg.author.bot) return;
+
+    if (msg.channel.type === "dm") return msg.author.send(`Oiii ${msg.author.username}! Fico extremamente feliz de estar falando com você, mas não posso comunicar, com tudo que tenho a oferecer, pela dm. Tenho certeza que serei bastente util para você em algum dos servidores que estou. Me chama lá!`)
 
     const args = msg.content.slice(process.env.PREFIX.length).split(" ");
     const command = args.shift().toLowerCase();

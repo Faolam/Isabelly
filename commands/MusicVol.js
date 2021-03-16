@@ -10,7 +10,7 @@ const execute = (bot, msg, args) => {
     queue.dispatcher.setVolume(volume / 10);
     queue.volume = volume;
     bot.queues.set(msg.guild.id, queue);
-    msg.channel.send(`Seu volume pessoal foi alterado ${msg.author.username}!`)
+    msg.channel.send(`${msg.author.username}, meu volume neste servidor foi alterado para ` + "`" + `${volume}` + "`" + `!`)
   };
   
   module.exports = {
