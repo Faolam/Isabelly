@@ -33,17 +33,25 @@ for (var filename of commandFiles) {
 // Aba para as requisições de música
 bot.queues = new Map();
 
+// Trazendo informações de comandos personalizados
+const KickMembers = require('./AdmCommands/kick')
+// Fim da aba de comandos personalizados!
 
 // Quando no terminal for digitado *node .* essas mensagens serão exibidas.
 bot.once('ready', () => {
     console.log('==================================@@@@@==================================');
     console.log('=============== Estou Pronta Para Ser Usada! Bot:Isabelly ===============');
     console.log('==================================@@@@@==================================');
+
+// Aba de coletânea de informações para comandos personalizados!
+    KickMembers(bot);
+// Fim da aba de coletânea de informações para comandos!
+
     let atividade_do_bot = [
         `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
         `🌍 Atualização v20.0.18 © Isabelly 🌍`,
         `🐨 VIGÉSIMA versão! 🐨`,
-        `🧼 =ajuda 🧼`,
+        `🧼 ${process.env.PREFIX}ajuda 🧼`,
         `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
     ],
     i = 0;
