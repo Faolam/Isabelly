@@ -49,9 +49,9 @@ bot.once('ready', () => {
 
     let atividade_do_bot = [
         `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
-        `🌍 Atualização v20.0.18 © Isabelly 🌍`,
-        `🐨 VIGÉSIMA versão! 🐨`,
-        `🧼 ${process.env.PREFIX}ajuda 🧼`,
+        `🥶 Atualização v20.1.3 © Isabelly 🥶`,
+        `😜 VIGÉSIMA versão! 😜`,
+        `🦅 ${process.env.PREFIX}ajuda 🦅`,
         `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
     ],
     i = 0;

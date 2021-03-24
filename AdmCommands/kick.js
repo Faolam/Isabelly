@@ -7,7 +7,7 @@ module.exports = (bot) => {
 
         if (msg.author.bot) return;
 
-        if (!msg.guild.member(msg.author).hasPermission('KICK_MEMBERS')) return msg.channel.send("Você não possui a permissão necessária para realizar esse comando!");
+        if (!msg.guild.member(msg.author).hasPermission('KICK_MEMBERS')) return;
 
         if (msg.content.startsWith('Isabelly expulse')) {
             const Usuario_Expulso = msg.mentions.users.first();
