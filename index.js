@@ -39,6 +39,7 @@ const KickMembers = require('./AdmCommands/kick')
 
 // Custom commands -- Variados!
 const GoodMorning = require('./commands/CustomCommands/GoodMorning')
+const Risada = require('./commands/CustomCommands/Risada')
 // Fim do custom commands 
 
 // Quando no terminal for digitado *node .* essas mensagens serão exibidas.
@@ -50,15 +51,16 @@ bot.once('ready', () => {
 // Aba de coletânea de informações para comandos personalizados!
     KickMembers(bot);
     GoodMorning(bot);
+    Risada(bot);
 // Fim da aba de coletânea de informações para comandos!
 
     let atividade_do_bot = [
-        `👷‍♀️ Encontrou algum problema? Reporte em "=reportar <problema>"! 👷‍♀️`,
-        `🥶 Atualização v20.1.3 © Isabelly 🥶`,
-        `🏁 Remoção de Bugs! Eu estou voando alto! 🏁`,
+        `🔨 Encontrou algum problema? Reporte em "=reportar <problema>"! 🔨`,
+        `🐙 Atualização v22.4.9 © Isabelly 🐙`,
+        `🔋 Remoção de Bugs e att CustomCommands! Eu estou voando alto! 🔋`,
         `😜 VIGÉSIMA versão! 😜`,
-        `🦅 ${process.env.PREFIX}ajuda 🦅`,
-        `🔑 Sendo util para ${bot.guilds.cache.size} servidores! 🔑`,
+        `👗 ${process.env.PREFIX}ajuda 👗`,
+        `🥎 Sendo util para ${bot.guilds.cache.size} servidores! 🥎`,
     ],
     i = 0;
     setInterval(() => bot.user.setActivity(`${atividade_do_bot[i++ % atividade_do_bot.length]}`, {
