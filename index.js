@@ -57,7 +57,7 @@ bot.once('ready', () => {
     let atividade_do_bot = [
         `🔨 Encontrou algum problema? Reporte em "=reportar <problema>"! 🔨`,
         `🐙 Atualização v22.4.9 © Isabelly 🐙`,
-        `🔋 Remoção de Bugs e att CustomCommands! Eu estou voando alto! 🔋`,
+        `🔋 Remoção de Bugs! Eu estou voando alto! 🔋`,
         `😜 VIGÉSIMA versão! 😜`,
         `👗 ${process.env.PREFIX}ajuda 👗`,
         `🥎 Sendo util para ${bot.guilds.cache.size} servidores! 🥎`,
