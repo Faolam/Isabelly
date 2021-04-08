@@ -35,6 +35,7 @@ bot.queues = new Map();
 
 // Trazendo informações de comandos personalizados
 const KickMembers = require('./AdmCommands/kick')
+const Roles_Reaction = require('./AdmCommands/RRoles')
 // Fim da aba de comandos personalizados!
 
 // Custom commands -- Variados!
@@ -52,6 +53,7 @@ bot.once('ready', () => {
     KickMembers(bot);
     GoodMorning(bot);
     Risada(bot);
+    Roles_Reaction(bot);
 // Fim da aba de coletânea de informações para comandos!
 
     let atividade_do_bot = [
