@@ -29,7 +29,7 @@ module.exports = (bot) => {
         if (!msg.guild.member(msg.author).hasPermission('ADD_REACTIONS')) {
             return;
         }
-        if (msg.content == "Roles Reaction") {
+        if (msg.content == "verificado") {
             // Aba destinada a colocar emojis
             const Emoji_Verificador = bot.emojis.cache.get("830132092485500958")
             // Fim da aba destinada  a emojis
