@@ -35,12 +35,13 @@ bot.queues = new Map();
 
 // Trazendo informações de comandos personalizados
 const KickMembers = require('./AdmCommands/kick')
-const Roles_Reaction = require('./AdmCommands/RRoles')
+const Roles_Reaction = require('./AdmCommands/ReactionCommands/RRoles')
 // Fim da aba de comandos personalizados!
 
 // Custom commands -- Variados!
 const GoodMorning = require('./commands/CustomCommands/GoodMorning')
 const Risada = require('./commands/CustomCommands/Risada')
+const ShutWay = require('./commands/CustomCommands/ShutWay')
 // Fim do custom commands 
 
 // Quando no terminal for digitado *node .* essas mensagens serão exibidas.
@@ -54,11 +55,12 @@ bot.once('ready', () => {
     GoodMorning(bot);
     Risada(bot);
     Roles_Reaction(bot);
+    ShutWay(bot);
 // Fim da aba de coletânea de informações para comandos!
 
     let atividade_do_bot = [
         `🔨 Encontrou algum problema? Reporte em "=reportar <problema>"! 🔨`,
-        `🐙 Atualização v22.4.9 © Isabelly 🐙`,
+        `🐙 Atualização v25.0.0 © Isabelly 🐙`,
         `🔋 Remoção de Bugs! Eu estou voando alto! 🔋`,
         `😜 VIGÉSIMA versão! 😜`,
         `👗 ${process.env.PREFIX}ajuda 👗`,
