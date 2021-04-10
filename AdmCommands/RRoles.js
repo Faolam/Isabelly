@@ -40,10 +40,11 @@ module.exports = (bot) => {
                 .setThumbnail(`https://cdn.discordapp.com/icons/${msg.guild.id}/${msg.guild.icon}.png`)
                 .setColor("#DCDCDC")
                 .setTitle(`Preparação para o Grande ${msg.guild.name}`)
-                .setDescription(`Você está entrando em um servidor reservado à desenvolvimento. Por favor confirme que você não é um robô. Torne-se um usuário verificado do ${msg.guild.name}. Clique no Emoji abaixo " ${Emoji_Verificador} " para a verificação.`)
+                .setDescription(`${msg.author.username}, você está entrando em um servidor reservado à desenvolvimento. Por favor confirme que você não é um robô. Torne-se um usuário verificado do ${msg.guild.name}. Clique no Emoji abaixo " ${Emoji_Verificador} " para a verificação.`)
                 .setFooter(`Basta apenas clicar no emoji mencionado abaixo.`, "https://i.pinimg.com/originals/eb/d3/04/ebd30421f6384457be27113d60ef964d.jpg")
             msg.channel.send(EMBED_DISCORD_REACTION).then(REACTION => {
                 REACTION.react(Emoji_Verificador)
+                msg.delete();
                 // Coletando reação
                 const Evento_React_Computer = (reaction, user) => reaction.emoji.id === `830132092485500958` && user.id === msg.author.id;
                 // Fim da Coleta da reação
@@ -53,7 +54,6 @@ module.exports = (bot) => {
                 Evento_React_Computer_Operation.on('collect', REACTIONN => {
                     REACTION.delete();
                     msg.member.roles.add(Cargo_Verificador);
-                    msg.delete();
                     console.log(`+`)
                     console.log(`=====================================================================================================================`)
                     console.log(`NOVO USUARIO : { name: ${msg.author.username}, id: ${msg.author.id} }, REGISTROU-SE NO SERVIDOR: { name: ${msg.guild.name}, id: ${msg.guild.id} }`)
