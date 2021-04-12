@@ -60,8 +60,10 @@ bot.once('ready', () => {
 
     let atividade_do_bot = [
         `🔨 Encontrou algum problema? Reporte em "=reportar <problema>"! 🔨`,
-        `🐙 Atualização v25.0.0 © Isabelly 🐙`,
+        `🐙 Atualização v28.0.0 © Isabelly 🐙`,
         `🔋 Remoção de Bugs! Eu estou voando alto! 🔋`,
+        `🐲 Oficial Testing my Robots 🐲`,
+        `🟠 Insta : Isabelly_Ds_Bot 🟠`, 
         `😜 VIGÉSIMA versão! 😜`,
         `👗 ${process.env.PREFIX}ajuda 👗`,
         `🥎 Sendo util para ${bot.guilds.cache.size} servidores! 🥎`,
