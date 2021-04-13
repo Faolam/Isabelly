@@ -4,11 +4,23 @@ const Discord = require('discord.js')
 module.exports = (bot) => {
     bot.on('message', async (msg) => {
         if (msg.content == "verificado") {
+            // Esta área foi reprogramada devido a um bug
+
+            // Local destinado a informações e comandos alternativos
+            if (msg.author.bot || msg.channel.type === "dm") {
+                return;
+            }
+            if (msg.guild.id === GoodGame || msg.guild.id === ReinoDilmer || msg.guild.id === PredioViverSemCall || msg.guild.id === Estudos|| msg.guild.id === CisneBranco || msg.guild.id === Salopaxz) {
+                return;
+            }
+            if (!msg.guild.member(msg.author).hasPermission('ADD_REACTIONS')) {
+                return;
+            }
+            // Fim da area alternativos
+
             // Aba destinada a colocar emojis
             const Emoji_Verificador = bot.emojis.cache.get("830132092485500958")
             // Fim da aba destinada  a emojis
-            
-            // Esta área foi reprogramada devido a um bug
             
             // Constando o id do cargo do servidor a guild oferecida e o membro
             const GUILD = bot.guilds.cache.get("531856510389714954")
@@ -24,16 +36,6 @@ module.exports = (bot) => {
             var CisneBranco = '719929816702386286'
             var Salopaxz = '792412596883685376'
             // Fim da area de Guilds 
-
-            if (msg.guild.id === GoodGame || msg.guild.id === ReinoDilmer || msg.guild.id === PredioViverSemCall || msg.guild.id === Estudos|| msg.guild.id === CisneBranco || msg.guild.id === Salopaxz) {
-                return;
-            }
-            if (msg.author.bot || msg.channel.type === "dm") {
-                return;
-            }
-            if (!msg.guild.member(msg.author).hasPermission('ADD_REACTIONS')) {
-                return;
-            }
 
             // Esta area foi atualizada por conta de um bug
 
