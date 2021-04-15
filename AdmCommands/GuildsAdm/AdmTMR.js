@@ -125,13 +125,15 @@ module.exports = (bot) => {
 
                             Evento_React_Orange_Operando.on('collect', Reaction_22 => {
                                 Member.kick(`Kickado!!`).then(() => {
-                                    msg.channel.send(`Sucesso ao expulsar "*${Usuario_Expulso.tag}*" do servidor!`)
+                                    msg.channel.send(`Sucesso ao expulsar "*${Member.user.tag}*" do servidor!`)
                                 })
+                                Reaction_2.delete();
                             })
                             Evento_React_Red_Operando.on('collect', Reaction_222 => {
                                 Member.ban(`Um Staff do servidor Testing My Robots Baniu Você!`).then(() => {
-                                    msg.channel.send(`Sucesso ao BANIR "*${Usuario_Expulso.tag}*" do servidor!`)
+                                    msg.channel.send(`Sucesso ao BANIR "*${Member.user.tag}*" do servidor!`)
                                 })
+                                Reaction_2.delete();
                             })
                             Evento_React_Green_Operando.on('collect', Reaction_2222 => {
                                 Reaction_2.delete();
