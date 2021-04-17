@@ -18,11 +18,12 @@ const execute = (bot, msg, args) => {
       search(s, (err, result) => {
         if (err) {
           msg.channel.send(`${msg.author.username}, infelizmente encontrei uma barreira no processo de busca. Por favor tente novamente de outra forma!`)
+          console.log(err)
         } else if (result && result.videos.length > 0) {
           const song = result.videos[0];
           const queue = bot.queues.get(msg.guild.id);
           // Resposta ao Usuário que solicitou a música
-          let embed_Música = new Discord.MessageEmbed()
+          const embed_Música = new Discord.MessageEmbed()
 
           .setThumbnail(song.thumbnail)
           .setTimestamp()
@@ -30,9 +31,9 @@ const execute = (bot, msg, args) => {
           .setTitle(`${emoji4} - Resultados para a Busca - ${emoji4}`)
           .setColor("RANDOM")
           .setDescription(`${emoji3} ${song.title} ${emoji3}`)
-          .addField(`🎧 Descrição da Música:`, song.description, true)
-          .addField(`🎧 URL da Música:`, song.url, true)
-          .addField(`🎧 Quantidade de views`, song.views, true)
+          .addField(`🎧 Duração da Música:`, `${song.timestamp}`, true)
+          .addField(`🎧 URL da Música:`, `${song.url}`, true)
+          .addField(`🎧 Quantidade de views`, `${song.views}`, true)
           .setFooter(`Sistema de Músicas! A fila está em: "=fila"`)
 
           msg.channel.send(embed_Música).then(msg1 => {
