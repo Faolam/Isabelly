@@ -2,9 +2,45 @@
   "Pedrão": [
     {
       "id": "476373357756022787",
-      "Icoins": 4770,
+      "Icoins": 2900,
+      "Picareta": "Ferro",
+      "Durabilidade": 20,
+      "Level": 1
+    }
+  ],
+  "uV1n1zznn": [
+    {
+      "id": "377250896549249033",
+      "Icoins": 2000,
       "Picareta": "Pedra",
       "Durabilidade": 5,
+      "Level": 1
+    }
+  ],
+  "theuzznn": [
+    {
+      "id": "400262190709473280",
+      "Icoins": 2750,
+      "Picareta": "Pedra",
+      "Durabilidade": 0,
+      "Level": 1
+    }
+  ],
+  "nao sei quem sou eu": [
+    {
+      "id": "394520555124031498",
+      "Icoins": 5190,
+      "Picareta": "Ferro",
+      "Durabilidade": 29,
+      "Level": 1
+    }
+  ],
+  "Lucky*": [
+    {
+      "id": "714821095873839201",
+      "Icoins": 2560,
+      "Picareta": "Pedra",
+      "Durabilidade": 0,
       "Level": 1
     }
   ]
