@@ -43,6 +43,7 @@ const AdmTMR = require('./AdmCommands/GuildsAdm/AdmTMR')
 const GoodMorning = require('./commands/CustomCommands/GoodMorning')
 const Risada = require('./commands/CustomCommands/Risada')
 const ShutWay = require('./commands/CustomCommands/ShutWay')
+const Game = require('./commands/CustomCommands/Game/Game')
 // Fim do custom commands 
 
 // Quando no terminal for digitado *node .* essas mensagens serão exibidas.
@@ -58,12 +59,13 @@ bot.once('ready', () => {
     Roles_Reaction(bot);
     ShutWay(bot);
     AdmTMR(bot);
+    Game(bot);
 // Fim da aba de coletânea de informações para comandos!
 
     let atividade_do_bot = [
         `🔨 Encontrou algum problema? Reporte em "=reportar <problema>"! 🔨`,
-        `🐙 Atualização v28.0.0 © Isabelly 🐙`,
-        `🔋 Remoção de Bugs! Eu estou voando alto! 🔋`,
+        `🐙 Atualização v29.8.2 © Isabelly 🐙`,
+        `🔋 Remoção de Bugs no comando Play! Eu estou voando alto! 🔋`,
         `🐲 Oficial Testing my Robots 🐲`,
         `🟠 Insta : Isabelly_Ds_Bot 🟠`, 
         `😜 VIGÉSIMA versão! 😜`,
