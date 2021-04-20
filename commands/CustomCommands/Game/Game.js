@@ -884,7 +884,7 @@ module.exports = (bot) => {
 
                                 Evento_React_Sword_Operando.on(`collect`, Reaction1 => {
                                     Reaction.delete();
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 1) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 1) {
                                         let Roubo = Level1[Math.floor(Math.random() * Level1.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -893,7 +893,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 2) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 2) {
                                         let Roubo = Level2[Math.floor(Math.random() * Level2.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -902,7 +902,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 3) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 3) {
                                         let Roubo = Level3[Math.floor(Math.random() * Level3.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -911,7 +911,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 4) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 4) {
                                         let Roubo = Level4[Math.floor(Math.random() * Level4.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -920,7 +920,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 5) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 5) {
                                         let Roubo = Level5[Math.floor(Math.random() * Level5.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -929,7 +929,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 6) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 6) {
                                         let Roubo = Level6[Math.floor(Math.random() * Level6.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -938,7 +938,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 7) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 7) {
                                         let Roubo = Level7[Math.floor(Math.random() * Level7.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -947,7 +947,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 8) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 8) {
                                         let Roubo = Level8[Math.floor(Math.random() * Level8.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -956,7 +956,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 9) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 9) {
                                         let Roubo = Level9[Math.floor(Math.random() * Level9.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
@@ -965,7 +965,7 @@ module.exports = (bot) => {
                                         msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
                                         Attack();                                        
                                     }
-                                    if (db.get(`${msg.author.username}[0].Level`).value() === 10) {
+                                    if (db.get(`${MemberUserName}[0].Level`).value() === 10) {
                                         let Roubo = Level10[Math.floor(Math.random() * Level10.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
                                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
