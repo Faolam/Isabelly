@@ -170,6 +170,11 @@ module.exports = (bot) => {
             New_Attack();
         }
         // Area de ataque
+        // Area de Verificação
+        if (msg.content.toLowerCase().startsWith('iuser')) {
+            IUser();
+        }
+        // Area de verificação
 
         function IsabellyGame() {
             const EmbedGame = new Discord.MessageEmbed()
@@ -827,6 +832,9 @@ module.exports = (bot) => {
                 if (!Member) {
                     msg.channel.send(`${msg.author.username}, o usuário ${Member.user.username} não pertence a este servidor! Mencione alguém que esteja neste servidor para atacar.`)
                 }
+                if (Member.user.username === msg.author.username) {
+                    return msg.channel.send(`**Você não pode atacar a si mesmo!**`)
+                }
                 if (Member) {
                     // VARIÁVEIS DE INFORMAÇÕES DE MEMBER
                     let MemberUserName = Member.user.username
@@ -845,16 +853,16 @@ module.exports = (bot) => {
                         if (db.get(`${MemberUserName}[0].Icoins`).value() >= 35000) {
 
                             // Aba de Roubo
-                            var Level11 = [0,0,250,250,500,500,750,750,1000,2000,5000,20000]
-                            var Level22 = [0,0,0,250,250,250,500,500,750,750,1000,2000,5000,20000]
-                            var Level33 = [0,0,250,250,250,250,500,500,750,750,1000,2000,5000,20000]
-                            var Level44 = [0,0,250,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
-                            var Level55 = [0,0,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
-                            var Level66 = [0,0,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,40000]
-                            var Level77 = [0,0,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,50000]
-                            var Level88 = [0,0,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,50000]
-                            var Level99 = [0,0,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,200000]
-                            var Level100 = [0,0,250,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,200000]
+                            var Level11 = [0,0,250,250,500,500,750,750,1000,2000,5000,2000,2000,20000]
+                            var Level22 = [0,0,0,250,250,250,500,500,750,750,1000,2000,2000,5000,20000]
+                            var Level33 = [0,0,250,250,250,250,500,500,750,750,1000,2000,5000,20000,2000]
+                            var Level44 = [0,2000,0,250,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
+                            var Level55 = [0,0,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
+                            var Level66 = [0,0,250,250,250,500,500,750,750,1000,2000,2000,2000,5000,40000]
+                            var Level77 = [0,0,250,250,250,250,500,500,750,750,1000,2000,2000,5000,50000]
+                            var Level88 = [0,0,250,250,250,250,500,500,750,750,1000,2000,5000,2000,50000]
+                            var Level99 = [0,0,250,250,250,250,250,500,500,750,750,1000,2000,2000,5000,200000]
+                            var Level100 = [0,0,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,2000,200000]
                             // Aba de Roubo
 
                             // Aba de proteção
@@ -1007,6 +1015,63 @@ module.exports = (bot) => {
                     }
                     
                 } 
+            }
+        }
+        function IUser() {
+            var Mencionado = msg.mentions.users.first();
+
+            if (!Mencionado) Mencionado = msg.author
+
+            if (msg.author.bot || msg.channel.type === "dm") {
+                return;
+            }
+
+            const Member = msg.guild.member(Mencionado)
+
+            if (!Member) {
+                msg.channel.send(`${msg.author.username}, o usuário ${Member.user.username} não pertence a este servidor! Mencione alguém que esteja neste servidor.`)
+            }
+
+            if (Member) {
+                // VARIÁVEIS DE INFORMAÇÕES DE MEMBER
+                let MemberName = Member.user.username
+                let MemberId = Member.user.id
+                let MemberDbId = db.get(`${MemberName}[0].id`).value()
+                // VARIÁVEIS DE INFORMAÇÕES DE MEMBER
+                
+                if (MemberId !== MemberDbId) {
+                    msg.channel.send(`**${msg.author.username}, o usuário "_${MemberName}_" não possui uma conta no Igame!**`)
+                }
+
+                if (MemberId === MemberDbId) {
+                    const EmbedIUser = new Discord.MessageEmbed()
+                        .setAuthor(`Isabelly Game - Informações de ${MemberName}`, bot.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
+                        .setColor(`RANDOM`)
+                        .setThumbnail(`${Member.user.displayAvatarURL({dynamic: true, format: "png", size: 1024})}`)
+                        .setTitle(`Status de Jogo`)
+                        .addFields(
+                            {name: `[👤] Nome`, value: `${MemberName}`},
+                            {name: `[💰] Icoins`, value: `${db.get(`${MemberName}[0].Icoins`).value()}`},
+                            {name: `[${Sword}] Espada`, value: `Nível ${db.get(`${MemberName}[0].Level`).value()}`},
+                            {name: `[${Shield}] Armadura`, value: `Nível ${db.get(`${MemberName}[0].Level`).value()}`},
+                            {name: `[${GoldApple}] Level`, value: `Nível ${db.get(`${MemberName}[0].Level`).value()}`},
+                            {name: `Volte`, value: `Saia com [🟦]`},
+                        )
+                        .setFooter(`Verificação por ${msg.author.username}`, msg.author.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
+                    msg.channel.send(EmbedIUser).then(Reaction => {
+                        Reaction.react(`🟦`)
+
+                        const Evento_React_Blue = (reaction, user) => reaction.emoji.name === `🟦` && user.id === msg.author.id;
+
+                        const Evento_React_Blue_Operando = Reaction.createReactionCollector(Evento_React_Blue);
+
+                        Evento_React_Blue_Operando.on(`collect`, Reaction1 => {
+                            Reaction.delete();
+                            msg.delete();
+                            Login1();
+                        })
+                    })
+                }
             }
         }
     })

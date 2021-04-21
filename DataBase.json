@@ -2,10 +2,10 @@
   "Pedrão": [
     {
       "id": "476373357756022787",
-      "Icoins": 11940,
+      "Icoins": 30720,
       "Picareta": "Diamante",
-      "Durabilidade": 343,
-      "Level": 1
+      "Durabilidade": 290,
+      "Level": 2
     }
   ],
   "uV1n1zznn": [
@@ -29,9 +29,9 @@
   "nao sei quem sou eu": [
     {
       "id": "394520555124031498",
-      "Icoins": 3880,
+      "Icoins": 4200,
       "Picareta": "Ferro",
-      "Durabilidade": 320,
+      "Durabilidade": 317,
       "Level": 3
     }
   ],
