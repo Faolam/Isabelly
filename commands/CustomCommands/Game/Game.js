@@ -511,8 +511,8 @@ module.exports = (bot) => {
                 .setTitle(`$- Nova Picareta para ${msg.author.username} -$`)
                 .addFields(
                     {name: `[💰] Icoins`, value: `${db.get(`${msg.author.username}[0].Icoins`).value()}`},
-                    {name: `[${Diamante}] Picareta de Diamante`, value: `20 000 Icoins - Durabilidade 200`},
-                    {name: `[${Esmeralda}] Picareta de Esmeralda`, value: `15 000 Icoins - Durabilidade 150`},
+                    {name: `[${Diamante}] Picareta de Diamante`, value: `20 000 Icoins - Durabilidade 350`},
+                    {name: `[${Esmeralda}] Picareta de Esmeralda`, value: `15 000 Icoins - Durabilidade 200`},
                     {name: `[🟦] Volte`, value: `Pág de Selecionamento.`},
                     {name: `[🟧] Avance`, value: `Nova Picareta pág 2`},
                 )
@@ -542,7 +542,7 @@ module.exports = (bot) => {
                     if (db.get(`${msg.author.username}[0].Icoins`).value() >= 20000) {
                         msg.channel.send(`**Compra efetuada com sucesso! Sua picareta de Diamante [${Diamante}] adicionou uma durabilidade de 200**`)
                         let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000
-                        let New_Durabilidade = 200 + db.get(`${msg.author.username}[0].Durabilidade`).value()
+                        let New_Durabilidade = 350 + db.get(`${msg.author.username}[0].Durabilidade`).value()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Durabilidade: New_Durabilidade}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Picareta: "Diamante"}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
@@ -558,7 +558,7 @@ module.exports = (bot) => {
                     if (db.get(`${msg.author.username}[0].Icoins`).value() >= 15000) {
                         msg.channel.send(`**Compra efetuada com sucesso! Sua picareta de Esmeralda [${Esmeralda}] adicionou uma durabilidade de 150**`)
                         let New_Icoins1 = db.get(`${msg.author.username}[0].Icoins`).value() - 15000
-                        let New_Durabilidade1 = 150 + db.get(`${msg.author.username}[0].Durabilidade`).value()
+                        let New_Durabilidade1 = 200 + db.get(`${msg.author.username}[0].Durabilidade`).value()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Durabilidade: New_Durabilidade1}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Picareta: "Esmeralda"}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins1}).write()
@@ -582,7 +582,7 @@ module.exports = (bot) => {
                 .setTitle(`$- Nova Picareta para ${msg.author.username} -$`)
                 .setThumbnail(`https://www.festejarereceber.com.br/wp-content/uploads/2016/07/Picareta-Minecraft.jpg`)
                 .addFields(
-                    {name: `[${Ouro}] Picareta de Ouro`, value: `8 000 Icoins - Durabilidade 65`},
+                    {name: `[${Ouro}] Picareta de Ouro`, value: `8 000 Icoins - Durabilidade 70`},
                     {name: `[${Ferro}] Picareta de Ferro`, value: `2000 Icoins - Durabilidade 35`},
                     {name: `[${Pedra}] Picareta de Pedra`, value: `250 Icoins - Durabilidade 5`},
                     {name: `[🟦] Volte`, value: `Para Picareta pág 2`}
@@ -613,7 +613,7 @@ module.exports = (bot) => {
                     if (db.get(`${msg.author.username}[0].Icoins`).value() >= 8000) {
                         msg.channel.send(`**Compra efetuada com sucesso! Sua picareta de Ouro [${Ouro}] adicionou uma durabilidade de 65**`)
                         let New_Icoins2 = db.get(`${msg.author.username}[0].Icoins`).value() - 8000
-                        let New_Durabilidade2 = 65 + db.get(`${msg.author.username}[0].Durabilidade`).value()
+                        let New_Durabilidade2 = 70 + db.get(`${msg.author.username}[0].Durabilidade`).value()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Durabilidade: New_Durabilidade2}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Picareta: "Ouro"}).write()
                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins2}).write()
@@ -785,8 +785,8 @@ module.exports = (bot) => {
                 .setDescription(`
                     Salve ${msg.author.username}! Essa é a area de ataque [${Sword}] a oponentes rivais a você.
                     Seu nivel de ataque atual está em: **--> ${db.get(`${msg.author.username}[0].Level`).value()}**  
-                    O inimigo, se tiver uma quantia menor que **15000** Icoins, não poderá ser atacado.
-                    Um gasto de **750** Icoins é efetuado a cada ataque que você fizer.
+                    O inimigo, se tiver uma quantia menor que **35000** Icoins, não poderá ser atacado.
+                    Um gasto de **20000** Icoins é efetuado a cada ataque que você fizer.
                     Você poderá adquirir **0, 250, 500, 750, 1000, 2000, 5000 ou 10000** Icoins do oponente
                     durante o ataque. Sendo que o resultado pode variar dependendo da armadura da vítima.
                     --> Preparado? Para atacar [${Sword}] alguém, digite : **iataque @VÍTIMA**
@@ -807,7 +807,7 @@ module.exports = (bot) => {
             })
         }
         function New_Attack() {
-            if (db.get(`${msg.author.username}[0].Icoins`).value() < 750) {
+            if (db.get(`${msg.author.username}[0].Icoins`).value() < 20000) {
                 msg.channel.send(`**Você não tem dinheiro suficiente para realizar este ataque. Minere ou adquira mais Icoins para conseguir efetua-lo.**`)
                 return Attack();
             }
@@ -838,23 +838,36 @@ module.exports = (bot) => {
                         msg.channel.send(`**${msg.author.username}, o usuário ${MemberUserName} não possui uma conta no Igame!**`)
                     }
                     if (MemberUserId === MemberUserDbId) {
-                        if (db.get(`${MemberUserName}[0].Icoins`).value() < 15000) {
-                            msg.channel.send(`**${MemberUserName} não pode ser atacado já que possui uma quantia inferior a 15000 Icoins.**`)
+                        if (db.get(`${MemberUserName}[0].Icoins`).value() < 35000) {
+                            msg.channel.send(`**${MemberUserName} não pode ser atacado já que possui uma quantia inferior a 35000 Icoins.**`)
                             Attack();
                         }
-                        if (db.get(`${MemberUserName}[0].Icoins`).value() >= 15000) {
+                        if (db.get(`${MemberUserName}[0].Icoins`).value() >= 35000) {
+
+                            // Aba de Roubo
+                            var Level11 = [0,0,250,250,500,500,750,750,1000,2000,5000,20000]
+                            var Level22 = [0,0,0,250,250,250,500,500,750,750,1000,2000,5000,20000]
+                            var Level33 = [0,0,250,250,250,250,500,500,750,750,1000,2000,5000,20000]
+                            var Level44 = [0,0,250,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
+                            var Level55 = [0,0,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,30000]
+                            var Level66 = [0,0,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,40000]
+                            var Level77 = [0,0,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,50000]
+                            var Level88 = [0,0,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,50000]
+                            var Level99 = [0,0,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,200000]
+                            var Level100 = [0,0,250,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,200000]
+                            // Aba de Roubo
 
                             // Aba de proteção
-                            var Level1 = [0,0,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level2 = [0,0,0,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level3 = [0,0,0,0,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level4 = [0,0,0,0,0,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level5 = [0,0,0,0,0,0,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level6 = [0,0,0,0,0,0,0,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level7 = [0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level8 = [0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level9 = [0,0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
-                            var Level10 = [0,0,0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000,10000]
+                            var Level1 = [0,0,250,250,500,500,750,750,1000,2000,5000]
+                            var Level2 = [0,0,0,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level3 = [0,0,0,0,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level4 = [0,0,0,0,0,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level5 = [0,0,0,0,0,0,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level6 = [0,0,0,0,0,0,0,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level7 = [0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level8 = [0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level9 = [0,0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
+                            var Level10 = [0,0,0,0,0,0,0,0,0,0,0,250,250,250,250,250,250,250,250,250,250,250,500,500,750,750,1000,2000,5000]
                             // Aba de proteção
 
                             const EmbedNewAttack = new Discord.MessageEmbed()
@@ -866,8 +879,8 @@ module.exports = (bot) => {
                                     {name: `[👤] Nome`, value: `${MemberUserName}`},
                                     {name: `[💰] Icoins do Oponente`, value: `${db.get(`${MemberUserName}[0].Icoins`).value()}`},
                                     {name: `[${Sword}] Espada do Oponente`, value: `Nível ${db.get(`${MemberUserName}[0].Level`).value()}`},
-                                    {name: `[${Shield}] Armadura do Oponente`, value: `Nível ${db.get(`${msg.author.username}[0].Level`).value()}`},
-                                    {name: `[${GoldApple}] Level`, value: `Nível ${db.get(`${msg.author.username}[0].Level`).value()}`},
+                                    {name: `[${Shield}] Armadura do Oponente`, value: `Nível ${db.get(`${MemberUserName}[0].Level`).value()}`},
+                                    {name: `[${GoldApple}] Level`, value: `Nível ${db.get(`${MemberUserName}[0].Level`).value()}`},
                                     {name: `[${Sword}] Ataque`, value: `Atacar oponente com força máxima!`},
                                     {name: `[${Book}] Voltar`, value: `Desistir do ataque.`},
                                 )
@@ -886,92 +899,102 @@ module.exports = (bot) => {
                                     Reaction.delete();
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 1) {
                                         let Roubo = Level1[Math.floor(Math.random() * Level1.length)]
+                                        let Roubo1 = Level11[Math.floor(Math.random() * Level11.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 2) {
                                         let Roubo = Level2[Math.floor(Math.random() * Level2.length)]
+                                        let Roubo1 = Level22[Math.floor(Math.random() * Level22.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 3) {
                                         let Roubo = Level3[Math.floor(Math.random() * Level3.length)]
+                                        let Roubo1 = Level33[Math.floor(Math.random() * Level33.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 4) {
                                         let Roubo = Level4[Math.floor(Math.random() * Level4.length)]
+                                        let Roubo1 = Level44[Math.floor(Math.random() * Level44.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 5) {
                                         let Roubo = Level5[Math.floor(Math.random() * Level5.length)]
+                                        let Roubo1 = Level55[Math.floor(Math.random() * Level55.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 6) {
                                         let Roubo = Level6[Math.floor(Math.random() * Level6.length)]
+                                        let Roubo1 = Level66[Math.floor(Math.random() * Level66.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 7) {
                                         let Roubo = Level7[Math.floor(Math.random() * Level7.length)]
+                                        let Roubo1 = Level77[Math.floor(Math.random() * Level77.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 8) {
                                         let Roubo = Level8[Math.floor(Math.random() * Level8.length)]
+                                        let Roubo1 = Level88[Math.floor(Math.random() * Level88.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 9) {
                                         let Roubo = Level9[Math.floor(Math.random() * Level9.length)]
+                                        let Roubo1 = Level99[Math.floor(Math.random() * Level99.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                     if (db.get(`${MemberUserName}[0].Level`).value() === 10) {
                                         let Roubo = Level10[Math.floor(Math.random() * Level10.length)]
+                                        let Roubo1 = Level100[Math.floor(Math.random() * Level100.length)]
                                         let New_Icoins_To_Afect = db.get(`${MemberUserName}[0].Icoins`).value() - Roubo
-                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 750 + Roubo
+                                        let New_Icoins = db.get(`${msg.author.username}[0].Icoins`).value() - 20000 + Roubo + Roubo1
                                         db.get(`${msg.author.username}`).find({id: `${InfoUserId}`}).assign({Icoins: New_Icoins}).write()
                                         db.get(`${MemberUserName}`).find({id: `${MemberUserId}`}).assign({Icoins: New_Icoins_To_Afect}).write()
-                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente.**`)
+                                        msg.channel.send(`**Ataque efetuado. Foram adiquiridos ${Roubo} Icoins do oponente. E ${Roubo1} foram adicionados de bônus.**`)
                                         Attack();                                        
                                     }
                                 })

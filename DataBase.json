@@ -2,37 +2,37 @@
   "Pedrão": [
     {
       "id": "476373357756022787",
-      "Icoins": 12920,
-      "Picareta": "Pedra",
-      "Durabilidade": 70,
+      "Icoins": 11940,
+      "Picareta": "Diamante",
+      "Durabilidade": 343,
       "Level": 1
     }
   ],
   "uV1n1zznn": [
     {
       "id": "377250896549249033",
-      "Icoins": 26640,
-      "Picareta": "Ouro",
-      "Durabilidade": 100,
-      "Level": 1
+      "Icoins": 50,
+      "Picareta": "Ferro",
+      "Durabilidade": 32,
+      "Level": 2
     }
   ],
   "theuzznn": [
     {
       "id": "400262190709473280",
-      "Icoins": 104890,
+      "Icoins": 6140,
       "Picareta": "Ouro",
       "Durabilidade": 0,
-      "Level": 1
+      "Level": 2
     }
   ],
   "nao sei quem sou eu": [
     {
       "id": "394520555124031498",
-      "Icoins": 100500,
-      "Picareta": "Ouro",
-      "Durabilidade": 95,
-      "Level": 1
+      "Icoins": 3880,
+      "Picareta": "Ferro",
+      "Durabilidade": 320,
+      "Level": 3
     }
   ],
   "Lucky*": [
@@ -56,9 +56,18 @@
   "zWillsz": [
     {
       "id": "406443112295038976",
-      "Icoins": 8570,
-      "Picareta": "Ferro",
-      "Durabilidade": 28,
+      "Icoins": 14860,
+      "Picareta": "Esmeralda",
+      "Durabilidade": 105,
+      "Level": 1
+    }
+  ],
+  "lorecristine": [
+    {
+      "id": "434487417706250243",
+      "Icoins": 2150,
+      "Picareta": "Pedra",
+      "Durabilidade": 4,
       "Level": 1
     }
   ]
