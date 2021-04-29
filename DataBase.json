@@ -2,9 +2,9 @@
   "Pedrão": [
     {
       "id": "476373357756022787",
-      "Icoins": 30720,
+      "Icoins": 42040,
       "Picareta": "Diamante",
-      "Durabilidade": 290,
+      "Durabilidade": 234,
       "Level": 2
     }
   ],
@@ -20,8 +20,8 @@
   "theuzznn": [
     {
       "id": "400262190709473280",
-      "Icoins": 6140,
-      "Picareta": "Ouro",
+      "Icoins": 11410,
+      "Picareta": "Ferro",
       "Durabilidade": 0,
       "Level": 2
     }
@@ -47,9 +47,9 @@
   "Nitezz": [
     {
       "id": "391382695806238720",
-      "Icoins": 8000,
+      "Icoins": 20280,
       "Picareta": "Ferro",
-      "Durabilidade": 5,
+      "Durabilidade": 0,
       "Level": 1
     }
   ],
@@ -68,6 +68,33 @@
       "Icoins": 2150,
       "Picareta": "Pedra",
       "Durabilidade": 4,
+      "Level": 1
+    }
+  ],
+  "anarossi10": [
+    {
+      "id": "744890397511254096",
+      "Icoins": 2700,
+      "Picareta": "Pedra",
+      "Durabilidade": 1,
+      "Level": 1
+    }
+  ],
+  "Alumia": [
+    {
+      "id": "559112440428888074",
+      "Icoins": 3170,
+      "Picareta": "Pedra",
+      "Durabilidade": 0,
+      "Level": 1
+    }
+  ],
+  "vinic41": [
+    {
+      "id": "451373705084272640",
+      "Icoins": 12760,
+      "Picareta": "Ferro",
+      "Durabilidade": 0,
       "Level": 1
     }
   ]
